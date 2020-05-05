@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5cd05326f31f5544a8cc3c334ea2ea1, type: 3}
+  m_Name: RegularGamePlay_sample
+  m_EditorClassIdentifier: 
+  cameraController: {fileID: 0}
+  stateName: 2
+  translateModules:
+  - {fileID: 11400000, guid: 87eef700ad7f8344c959df109588c74c, type: 2}
+  - {fileID: 11400000, guid: 7b6beefd56a45d04481ae8a3ae5883f6, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  rotateModules:
+  - {fileID: 11400000, guid: ad8c572a37acbda4ab3694d3b1de1164, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

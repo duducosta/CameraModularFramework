@@ -1,0 +1,25 @@
+--- COLLISION HANDLER ----
+
+Validates the position and deslocates the camera for a valid position in collision will happen.
+
+# How to create your own:
+1- Create a new class that inherits the one.
+2- Use the [CreateAssetMenu] attribute on the class so it appers in the asset menu and you will be able to create a .asset object.
+Ex: [CreateAssetMenu(fileName = "CollisionHandler_myCollisionHandler", menuName = "Camera Controller Module/CollisionHandler_myCollisionHandler")]
+
+The provided sample collision handler is good enough for most situations. If you have a specific gameplay, you will have to make your own.
+
+You must implement:
+
+-collisionPoints (array): array of collsion points around the camera to antecipate collision.
+-StartModule(): Called by the Start() method of the CameraController script.
+-CollisionTreatment(): This receives a position and a distance to travel. It check it the position is able to go to the (position + distance to travel).
+If the new position (position + distance to travel) is valid, it returns the new position, otherwise it must return a valid position.
+
+
+Feel free to include any variable that you think you will need in this new class, as well any new methods.
+
+
+# Keep in mind:
+-The collsionPoints array must be implemented in the StartModule() method of the derived class.
+-All the tranlation modules send information for this object every frame.

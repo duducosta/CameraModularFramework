@@ -1,0 +1,31 @@
+--- CAMERA STATES ----
+
+The possible camera states are controlled by a enum script called "CameraStates", in the base class folder.
+The Camera State class has a CameraStates enum that serves as the state "name", and two arrays: one for Translate Modules and other for Rotation modules.
+
+
+
+# How to create your own:
+1- You must open the CameraStates enum script and make sure all your possible states are there. No more, no less.
+2- Use the [CreateAssetMenu] attribute on the class so it appers in the asset menu and you will be able to create a .asset object.
+Ex: [CreateAssetMenu(fileName = "CameraState_xxx", menuName = "Camera Controller Module/CameraStates/xxx")]
+
+
+Every Camera state in the enum script MUST have a corresponding class. With its correct name in the enum variable.
+You also need choose the size of the arrays and to drag all your modules (translate and rotate) in each state, making it functional.
+
+You must implement:
+
+-OnStateEntry(): Called by the StateTransition() method. 
+This is executed on entering a new state.
+If there is nothing to do on state entry, leave it empty.
+-OnStateExit(): Called by the StateTransition() method. 
+This is executed on exiting a new state.
+If there is nothing to do on state exit, leave it empty.
+
+Feel free to include any variable that you think you will need in this new class, as well any new methods.
+
+
+# Keep in mind:
+If you are using Visual Studio to generate the overrides, remeber to delete the "not implemented" exception that it creates;
+I recommend having a state called "backToDefault", so you can reset your camera every once in a while.

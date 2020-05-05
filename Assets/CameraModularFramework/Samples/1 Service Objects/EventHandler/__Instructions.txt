@@ -1,0 +1,23 @@
+--- EVENT HANDLER ----
+
+Controls the camera states.
+
+# How to create your own:
+1- Create a new class that inherits the one.
+2- Use the [CreateAssetMenu] attribute on the class so it appers in the asset menu and you will be able to create a .asset object.
+Ex: [CreateAssetMenu(fileName = "EventHandler_myEventHandler", menuName = "Camera Controller Module/EventHandler_myEventHandler")]
+
+You should make a custom made eventHandler for your project.
+
+It is optimal for a player that also operates under a FSM.
+
+You must implement the methods:
+
+-SetCameraState(): Called every Camera Update before every thing. Sets the camera state for that frame.
+-UpdateData(): Put instructions that should be updated every frame (last position, for instance). This is called by the SetCameraState() method.
+
+Feel free to include any variable that you think you will need in this new class, as well any new methods.
+
+
+# Keep in mind:
+The CameraController ONLY calls the SetCameraState() method.

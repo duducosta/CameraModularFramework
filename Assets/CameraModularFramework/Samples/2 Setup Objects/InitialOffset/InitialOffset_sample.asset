@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03ea6bd64bd0c9c4f8b3abc1b04a02a9, type: 3}
+  m_Name: InitialOffset_sample
+  m_EditorClassIdentifier: 
+  cameraController: {fileID: 0}
+  enableModule: 1
+  SpecificModuleDescription: 'Places the camera behind the player using authoritarian
+    methods, such as LookAt(), Rotate(), transform.position = new position, etc.
+
+    The BackToDefalt Sample module will use this as reference for it target position
+    and rotation.'
+  space: 1
+  xOffset: 0
+  yOffset: 10
+  zOffset: 10
+  typeOfFocus: 1
+  angleDownwards: 30
+  heightOverPlayer: 5

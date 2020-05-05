@@ -1,0 +1,24 @@
+--- ROTATE MODULES ----
+
+This modules are responsible for changing de ROTATION of the camera.
+
+# How to create your own:
+This object can be used in several states, but you only write it once.
+Rotations are not cummulative as position/Vector3, so the rotation must be performed by the module it self.
+It does not passes the rotation to anywhere else.
+The rotation performed must the only the rotation for that Camera Update.
+The order of rotation matters (this is how things go, not a property of this package)
+
+
+
+You must implement:
+-StartModule(): Called onde at the Start() method of th CameraController script.
+-RunModule(): Called every CameraUpdate();
+-SetEnabled() and SetDisabled(): Implement this if you desire turn the module on/off. It is important having these methods because in some cases when enabling/disabling you must to a set of instructions to prepare it for the next time you enable/disable it.
+
+# Keep in mind:
+Each module MUST rotate just the amount of the camera update.
+NO translation should be done here.
+If authoritarian methods are used (LookAt, for example) it will override every other rotation done. In that case, check the order and cosidering having just one rotation module with only this method.
+REMEMBER: Rotations does not have the cummulative properties of translation. The order is important, and it can change the final result.
+I don't find useful having several Rotation modules at each state, because it gets hard to predict the outcome of the final rotation.

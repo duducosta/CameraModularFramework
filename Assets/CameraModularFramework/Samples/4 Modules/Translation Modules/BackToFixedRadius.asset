@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c6a03ca59cc8c14e84868d67056a1f2, type: 3}
+  m_Name: BackToFixedRadius
+  m_EditorClassIdentifier: Assembly-CSharp:ModularGameplayCameraController:BackToFixedOffset
+  cameraController: {fileID: 0}
+  TranslateOutput: {x: 0.68297637, y: -0.70695096, z: -0.1837487}
+  enableModule: 1
+  applyToX: 1
+  applyToY: 1
+  applyToZ: 1
+  SpecificModuleDescription: 'Forces the camera to a specific radius around the player.
+
+    Be careful if this does not causes conflict with other modules.'
+  useInitialRadius: 0
+  radius: 10

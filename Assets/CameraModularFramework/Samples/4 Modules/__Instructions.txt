@@ -1,0 +1,9 @@
+--- MODULES ----
+
+The modules are the parts that are the most custom made. 
+This, with the correct use of the camera state, defines how the camera will follow your player, if the camera will simulate foot steps, if the camera goes over the shoulder of your player when aiming, if we will have a different combat camera, etc.
+
+Every Camera Update the Camera controllers:
+1. Set state for the current update
+2. Goes through all the translate modules and validades each one of then individualy in the collision handler.
+3. Goes through all rotation modules.

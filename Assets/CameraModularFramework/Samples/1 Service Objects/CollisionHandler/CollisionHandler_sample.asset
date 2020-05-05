@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ec5cd16f5fcb104793c535669a99240, type: 3}
+  m_Name: CollisionHandler_sample
+  m_EditorClassIdentifier: 
+  collisionPoints:
+  - {x: 0, y: 0, z: 0}
+  - {x: -0.5, y: 0, z: 0}
+  - {x: 0.5, y: 0, z: 0}
+  - {x: 0, y: 0.5, z: 0}
+  - {x: 0, y: 0, z: -0.5}
+  - {x: 0, y: -0.5, z: 0}
+  - {x: 0, y: 0, z: 0.5}
+  cameraController: {fileID: 0}
+  enableModule: 1
+  SpecificModuleDescription: This collision handler has 6 points around the camera
+    and checks if there is something between the camera and the player.
+  smoothLevel: 0.5
+  radius: 0.5
+  showCollisionInfo: 0

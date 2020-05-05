@@ -1,0 +1,20 @@
+--- TRANSLATE MODULES ----
+
+This modules are responsible for changing de POSITION of the camera.
+
+# How to create your own:
+This object can be used in several states, but you only write it once.
+For instance, if you want the camera to follow the player, you create a module that "transfers" the variation in position of the player to the camera. If this following should be present when the player is running and walking, but not when falling, you just drag this recent created module to the running and walking states.
+This modules uses the cummulative property of position/Vector3. Each one must return a distance to be traveled by the camera at that update.
+
+
+
+You must implement:
+-StartModule(): Called onde at the Start() method of th CameraController script.
+-RunModule(): Called every CameraUpdate();
+-SetEnabled() and SetDisabled(): Implement this if you desire turn the module on/off. It is important having these methods because in some cases when enabling/disabling you must to a set of instructions to prepare it for the next time you enable/disable it.
+
+# Keep in mind:
+Each module MUST return JUST a amount to be travelled in the current update.
+NO rotation should be done here.
+NO authoritarian method must be used (SetPosition, transform.position = Vector3(x,y,z), etc)
